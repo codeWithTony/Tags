@@ -3,7 +3,7 @@
     "alias": "tags",
     "description": "A site-wide tags manager library, used throughout the CMS.",
     "keywords": [],
-    "version": "0.1.0",
+    "version": "1.0.0",
     "active": 1,
     "order": 1,
     "providers": [
