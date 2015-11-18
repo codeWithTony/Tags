@@ -56,47 +56,5 @@ class TagController extends Controller
         return Response::json($savedTag->toArray());
     }
 
-    /**
-     * Link the given entity with a tag
-     * @param Request $request
-     */
-    public function linkTag(Request $request)
-    {
-        $tagId = $request->get('tagId');
-        $entityClass = $request->get('entityClass');
-        $entityId = $request->get('entityId');
 
-        $entity = $entityClass::find($entityId);
-        $zone = $request->get('zone');
-        $entity->files()->attach($tagId, ['tagable_type' => $entityClass, 'zone' => $zone]);
-        $tagable = DB::table('tags__tagables')->whereTagId($tagId)->whereZone($zone)->whereImageableType($entityClass)->first();
-        $tag = $this->tag->find($tagable->tag_id);
-
-//        $thumbnailPath = $this->imagy->getThumbnail($tag->path, 'mediumThumb');
-
-        event(new TagWasLinked($tag, $entity));
-
-        return Response::json([
-            'error' => false,
-            'message' => 'The link has been added.',
-            'result' => ['tagableId' => $tagable->id]
-        ]);
-    }
-
-    /**
-     * Remove the record in the tags__tagables table for the given id
-     * @param Request $request
-     */
-    public function unlinkTag(Request $request)
-    {
-        $tagableId = $request->get('tagableId');
-        $deleted = DB::table('tags__tagables')->whereId($tagableId)->delete();
-        if (! $deleted) {
-            return Response::json(['error' => true, 'message' => 'The tag was not found.']);
-        }
-
-        event(new TagWasUnlinked($tagableId));
-
-        return Response::json(['error' => false, 'message' => 'The link has been removed.']);
-    }
 }

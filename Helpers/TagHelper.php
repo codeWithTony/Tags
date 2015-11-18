@@ -14,6 +14,6 @@ class TagHelper
     {
     	$tags = $tags_collection;
     	$stringable = array_map(function($tag){ return $tag['tag']; }, $tags->toArray());
-		return implode(", ", $stringable);
+		return implode("; ", $stringable);
     }
 }

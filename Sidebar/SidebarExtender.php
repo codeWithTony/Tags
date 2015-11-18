@@ -30,7 +30,7 @@ class SidebarExtender implements \Maatwebsite\Sidebar\SidebarExtender
     public function extendWith(Menu $menu)
     {
         $menu->group(trans('core::sidebar.content'), function (Group $group) {
-            $group->item(trans('tags::tag.title.tag'), function (Item $item) {
+            $group->item(trans('tags::tag.title.tags'), function (Item $item) {
                 $item->weight(2);
                 $item->icon('fa fa-tags');
                 $item->route('admin.tags.tag.index');

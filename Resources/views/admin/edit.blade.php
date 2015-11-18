@@ -13,29 +13,29 @@
 @stop
 
 @section('content')
-{!! Form::open(['route' => ['admin.tags.tag.update', $tag->id], 'method' => 'put']) !!}
-<div class="row">
-    <div class="col-md-8">
-        <div class="nav-tabs-custom">
-            @include('partials.form-tab-headers')
-            <div class="tab-content">
-                <?php $i = 0; ?>
-                <?php foreach (LaravelLocalization::getSupportedLocales() as $locale => $language): ?>
-                    <?php ++$i; ?>
-                    <div class="tab-pane {{ App::getLocale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
-                        @include('tags::admin.partials.edit-fields', ['lang' => $locale])
+    {!! Form::open(['route' => ['admin.tags.tag.update', $tag->id], 'method' => 'put']) !!}
+    <div class="row">
+        <div class="col-md-8">
+            <div class="nav-tabs-custom">
+                @include('partials.form-tab-headers')
+                <div class="tab-content">
+                    <?php $i = 0; ?>
+                    <?php foreach (LaravelLocalization::getSupportedLocales() as $locale => $language): ?>
+                        <?php ++$i; ?>
+                        <div class="tab-pane {{ App::getLocale() == $locale ? 'active' : '' }}" id="tab_{{ $i }}">
+                            @include('tags::admin.partials.edit-fields', ['lang' => $locale])
+                        </div>
+                    <?php endforeach; ?>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.update') }}</button>
+                        <button class="btn btn-default btn-flat" name="button" type="reset">{{ trans('core::core.button.reset') }}</button>
+                        <a class="btn btn-danger pull-right btn-flat" href="{{ URL::route('admin.tags.tag.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
                     </div>
-                <?php endforeach; ?>
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.update') }}</button>
-                    <button class="btn btn-default btn-flat" name="button" type="reset">{{ trans('core::core.button.reset') }}</button>
-                    <a class="btn btn-danger pull-right btn-flat" href="{{ URL::route('admin.tags.tag.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
                 </div>
-            </div>
-        </div> {{-- end nav-tabs-custom --}}
+            </div> {{-- end nav-tabs-custom --}}
+        </div>
     </div>
-</div>
-{!! Form::close() !!}
+    {!! Form::close() !!}
 @stop
 
 

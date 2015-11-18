@@ -69,7 +69,7 @@ class EloquentTagRepository extends EloquentBaseRepository implements TagReposit
     public function syncMultipleTagsByZoneForEntity($tags_string, $zone, $entity)
     {
         $entityClass = get_class($entity);
-        $tags = explode(',', $tags_string);
+        $tags = explode(';', $tags_string);
         $sync_tags = [];
         foreach ($tags as $tag) {
             $tag = trim($tag, " \t\n\r\0\x0B");

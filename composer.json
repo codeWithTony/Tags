@@ -1,7 +1,7 @@
 {
-  "name": "codeWithTony/tags-module",
-  "type": "asgard-module",
-  "description": "Tags Manager module for AsgardCMS.",
+  "name": "codeWithTony/Taggable",
+  "type": "module",
+  "description": "Site-wide Tags Manager module for AsgardCMS.",
   "keywords": [
     "asgardcms",
     "tags",
@@ -17,8 +17,8 @@
   ],
   "support": {
     "email": "support@codewithtony.com",
-    "issues": "https://github.com/codeWithTony/Tags/issues",
-    "source": "https://github.com/codeWithTony/Tags"
+    "issues": "https://github.com/codeWithTony/Taggable/issues",
+    "source": "https://github.com/codeWithTony/Taggable"
   },
   "require": {
     "php": ">=5.4",
@@ -32,7 +32,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/codeWithTony/modules"
+      "url": "https://github.com/codeWithTony/Taggable"
     }
   ],
   "autoload-dev": {

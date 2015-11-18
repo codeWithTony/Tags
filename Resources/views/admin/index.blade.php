@@ -6,7 +6,7 @@
 </h1>
 <ol class="breadcrumb">
     <li><a href="{{ URL::route('dashboard.index') }}"><i class="fa fa-dashboard"></i> {{ trans('core::core.breadcrumb.home') }}</a></li>
-    <li><i class="fa fa-camera"></i> {{ trans('tags::tag.breadcrumb.tag') }}</li>
+    <li><i class="fa fa-tag"></i> {{ trans('tags::tag.breadcrumb.tag') }}</li>
 </ol>
 @stop
 

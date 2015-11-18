@@ -19,4 +19,12 @@ interface TagRepository extends BaseRepository
      * @return object
      */
     public function findMultipleTagsByZoneForEntity($zone, $entity);
+
+    /**
+     * Sync multiple tags for the given zone and entity
+     * @param zone $zone
+     * @param object $entity
+     * @return object
+     */
+    public function syncMultipleTagsByZoneForEntity($tag_string, $zone, $entity);
 }

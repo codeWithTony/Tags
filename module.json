@@ -1,7 +1,7 @@
 {
     "name": "Tags",
     "alias": "tags",
-    "description": "A tags library, used throughout the CMS.",
+    "description": "A site-wide tags manager library, used throughout the CMS.",
     "keywords": [],
     "version": "0.1.0",
     "active": 1,
