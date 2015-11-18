@@ -38,8 +38,7 @@
   "autoload-dev": {
     "psr-4": {
       "Modules\\Tags\\": ".",
-      "Modules\\": "Modules/",
-      "Helpers\\": "Modules/Tags/Helpers"
+      "Modules\\": "Modules/"
     }
   },
   "minimum-stability": "dev",
