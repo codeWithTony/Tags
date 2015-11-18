@@ -1,0 +1,47 @@
+{
+  "name": "codeWithTony/tags-module",
+  "type": "asgard-module",
+  "description": "Tags Manager module for AsgardCMS.",
+  "keywords": [
+    "asgardcms",
+    "tags",
+    "tags manager"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tony",
+      "email": "tony@codewithtony.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@codewithtony.com",
+    "issues": "https://github.com/codeWithTony/Tags/issues",
+    "source": "https://github.com/codeWithTony/Tags"
+  },
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "~1.0",
+    "asgardcms/core-module": "~1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "orchestra/testbench": "~3.1"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/codeWithTony/modules"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Tags\\": ".",
+      "Modules\\": "Modules/",
+      "Helpers\\": "Modules/Tags/Helpers"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Tags",
+    "alias": "tags",
+    "description": "A tags library, used throughout the CMS.",
+    "keywords": [],
+    "version": "0.1.0",
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Tags\\Providers\\TagServiceProvider",
+        "Modules\\Tags\\Providers\\RouteServiceProvider"
+    ],
+    "aliases": {
+        "Tags": "Modules\\Tags\\Helpers\\TagHelper"
+    },
+    "files": []
+}
