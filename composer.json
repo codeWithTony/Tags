@@ -1,6 +1,6 @@
 {
   "name": "codewithtony/taggable",
-  "type": "module",
+  "type": "asgard-module",
   "description": "Site-wide Tags Manager module for AsgardCMS.",
   "keywords": [
     "asgardcms",
